@@ -17,5 +17,5 @@ spec:
       containers:
       - name: demo-cont
         image: norego18/demoapi:v1
-      ports:
-      - containerPort: 5000
+        ports:
+        - containerPort: 5000

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myrs
+  labels:
+    dept: smartapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      dept: smartapp
+  template:
+    metadata:
+      labels:
+        dept: smartapp
+    spec:
+      containers:
+      - name: demo-cont
+        image: norego18/demoapi:v1
+      ports:
+      - containerPort: 5000

@@ -4,3 +4,5 @@ ETCDCTL_API=3 etcdctl \
   --key=/etc/kubernetes/pki/etcd/server.key \
   --cacert=/etc/kubernetes/pki/etcd/ca.crt \
   snapshot save /tmp/etcd-backup.db
+
+mv /etc/kubernetes/manifests/kube-apiserver.yaml /tmp/

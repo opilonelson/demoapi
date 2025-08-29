@@ -9,14 +9,18 @@ spec:
     command:
       - stress
     args:
+      - "--cpu"
+      - "500m" 
       - "--vm"
       - "1"              
       - "--vm-bytes"
-      - "200M"           
+      - "100M"           
       - "--timeout"
       - "60s"            
     resources:
       requests:
-        memory: "64Mi"
+        memory: "120Mi"
+        cpu: 500m
       limits:
         memory: "128Mi"
+        cpu: 500m
